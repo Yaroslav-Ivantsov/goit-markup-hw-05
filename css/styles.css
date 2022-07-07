@@ -127,6 +127,7 @@ img{
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .site-nav .link:hover,
@@ -190,6 +191,7 @@ img{
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .site-contacts .contacts-link:hover,
@@ -422,6 +424,7 @@ img{
     border-radius: 50%;
     padding: 12px;
     fill: var(--soc-main-colar);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social a:hover,
@@ -458,6 +461,10 @@ img{
     fill: var(--soc-main-colar);
     border: 1px solid var(--soc-main-colar);
     border-radius: 4px;
+}
+
+.company-card a {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .companies .company-card:not(:last-child){
@@ -539,6 +546,8 @@ footer{
 
 .contacts-nav a{
     text-decoration: none;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 
 .contacts-nav .place-list{
@@ -588,6 +597,7 @@ footer{
     border-radius: 50%;
     fill: var(--white-text-color);
     background: rgba(255, 255, 255, 0.1);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-list a:hover,
@@ -631,7 +641,10 @@ button{
     border: none;
     border-radius: 4px;
     letter-spacing: 0.06em;
+    transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
+
 
 button:hover,
 button:focus{
@@ -664,6 +677,7 @@ button:focus{
     font-size: 16px;
     line-height: 1.62;
     text-align: center;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .but-link{
@@ -702,6 +716,7 @@ button:focus{
     margin-right: 30px;
     margin-bottom: 30px;
     width: 370px;
+    
 }
 
 
@@ -724,6 +739,7 @@ button:focus{
 .card-link{
     display: block;
     text-decoration: none;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .card-link:hover{
@@ -738,17 +754,28 @@ button:focus{
 /* Overlay projects card */
 .portfolio-thumb {
     position: relative;
+    overflow: hidden;
 }
 
 .portfolio-overlay {
     position: absolute;
+    opacity: 0;
     top: 0;
     left: 0;
-    transform: translateY(0);
+    transform: translateY(100%);
     width: 100%;
     height: 100%;
     background-color: rgba(33, 150, 243, 0.9);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.project-work:hover .portfolio-overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
 
 .portfolio-text {
     margin: 0;
