@@ -629,7 +629,7 @@ address{
     
 }
 
-button{
+.main-button{
     padding: 10px 32px;
     background-color: var(--acent-text-color);
     color: var(--white-text-color);
@@ -646,8 +646,8 @@ button{
 }
 
 
-button:hover,
-button:focus{
+.main-button:hover,
+.main-button:focus{
     background-color: var(--bg-buttom-colar);
 }
 
@@ -820,4 +820,57 @@ button:focus{
     font-weight: 400;
     font-size: 16px;
     line-height: 1.88;  
+}
+
+/* Modal window */
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 528px;
+    height: 581px;
+    background-color: var(--white-text-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+.button-modal {
+    position: absolute;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    top: 8px;
+    right: 8px;
+    transform: translate(-8%, -8%);
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+
+}
+
+.close-modal {
+    display: flex;
+    width: 18px;
+    height: 18px;
 }
